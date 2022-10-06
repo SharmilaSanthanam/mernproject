@@ -26,6 +26,9 @@ app.use(fileUpload({
 }))
 
 // Routes
+app.get("/", (req, res) =>
+  res.send(`Server Running`)
+);
 app.use('/user', require('./routes/userRouter'))
 app.use('/api', require('./routes/categoryRouter'))
 app.use('/api', require('./routes/upload'))
